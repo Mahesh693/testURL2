@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html>
 <body>
-    <h1>Case 2: Auto Download</h1>
-    <p>Please wait...</p>
-    <a id="auto" href="http://jbhd.tvftqbk.cc/archives/20736.html" download="http://jbhd.tvftqbk.cc/archives/20736.html" style="display:none;"></a>
+    <h1>Case 2: External Redirect Test</h1>
+    <p>Redirecting to suspicious URL...</p>
+
     <script>
         window.onload = function() {
-            setTimeout(function() { document.getElementById('auto').click(); }, 500);
+            setTimeout(function() { 
+                // This forces the browser to go to the URL
+                // Your detection engine should catch this network request.
+                window.location.href = "http://jbhd.tvftqbk.cc/archives/20736.html";
+            }, 500);
         };
     </script>
 </body>
